@@ -15,7 +15,7 @@ AIO_FEED_ID = ["pump", "fan", "temperature", "humidity", "lux","mask"]
 
 
 mqtt_client = MyMQTTClient(AIO_USERNAME, AIO_KEY, AIO_FEED_ID)
-# uart = UARTCommunication(baudrate=115200, timeout=1)
+uart = UARTCommunication(baudrate=115200, timeout=1)
 camera = AI_CAM("model/keras_model.h5", "model/labels.txt", camera_index=0)
 
 def myProcessData(data):
@@ -38,14 +38,14 @@ def main():
     np.set_printoptions(suppress=True)
 
     # serial init
-    # uart.processData = myProcessData
+    uart.processData = myProcessData
     
     #mqtt init
     mqtt_client.start()
     count_ai = 0
     camera.camera.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
     while True:
-        # uart.read_serial()
+        uart.read_serial()
         
         ret, image = camera.camera.read()
         cv2.imshow("Webcam Image", image)
