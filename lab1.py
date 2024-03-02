@@ -5,7 +5,7 @@ import random
 
 AIO_FEED_ID = ["pump","fan","temperature","humidity","lux"]
 AIO_USERNAME = "GutD"
-AIO_KEY = "aio_LZPY13RBOSG7OjfScdYdWCcQgctP"
+AIO_KEY = "aio_JskM93fdBC86QY0MvHnIugwvbHCh"
 
 def connected(client):
     print("Ket noi thanh cong ...")
