@@ -7,8 +7,8 @@ from mqtt import MyMQTTClient
 from uart import UARTCommunication
 
 
-# AIO_USERNAME = "GutD"
-# AIO_KEY = "aio_lpJv13VW890BLOHxtpy3D0fHZhge"
+AIO_USERNAME = "GutD"
+AIO_KEY = ""
 AIO_FEED_ID = ["pump", "fan", "temperature", "humidity", "lux","mask"]
 
 
